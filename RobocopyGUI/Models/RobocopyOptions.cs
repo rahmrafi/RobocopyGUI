@@ -1,6 +1,6 @@
 ﻿namespace RobocopyGUI.Models;
 
-public class RobocopyOption
+public class RobocopyOptions
 {
     public string SourcePath { get; set; } = string.Empty;
     public string DestinationPath { get; set; } = string.Empty;

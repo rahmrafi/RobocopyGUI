@@ -1,6 +1,6 @@
 ﻿using Microsoft.UI.Xaml.Data;
 
-namespace RobocopyGUI
+namespace RobocopyGUI;
 
 public class BoolNegationConverter : IValueConverter
 {
