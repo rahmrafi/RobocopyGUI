@@ -26,7 +26,7 @@ public partial class MainViewModel : ObservableObject
     [ObservableProperty] private bool mirror;
     [ObservableProperty] private bool copySubdirectories = true;
     [ObservableProperty] private bool purge;
-    [ObservableProperty] private bool restartableModel;
+    [ObservableProperty] private bool restartableMode;
 
     [ObservableProperty] private bool multiThreaded = true;
     [ObservableProperty] private double threadCount = 8;
@@ -39,23 +39,8 @@ public partial class MainViewModel : ObservableObject
 
     public ObservableCollection<string> LogLines { get; } = new();
 
-    private bool CanStart() => !IsRunning;
-    [RelayCommand(CanExecute = nameof(CanCancel))]
-    private void Cancel()
-    {
-        _cts?.Cancel();
-    }
-
-    private bool CanCancel() => !IsRunning;
-    private void OnIsRunningChanged(bool value)
-    {
-        StartCommand.NotifyCanExecuteChanged();
-        CancelCommand.NotifyCanExecuteChanged();
-    }
-
     [RelayCommand(CanExecute = nameof(CanStart))]
-
-    private async Task StartTask()
+    private async Task StartAsync()
     {
         if (string.IsNullOrWhiteSpace(SourcePath) || string.IsNullOrWhiteSpace(DestinationPath))
         {
@@ -78,7 +63,7 @@ public partial class MainViewModel : ObservableObject
             Mirror = Mirror,
             CopySubDirectories = CopySubdirectories,
             Purge = Purge,
-            RestartableMode = RestartableModel,
+            RestartableMode = RestartableMode,
             MultiThreaded = MultiThreaded,
             ThreadCount = (int)ThreadCount,
             RetryCount = (int)RetryCount,
@@ -118,5 +103,21 @@ public partial class MainViewModel : ObservableObject
             _cts?.Dispose();
             _cts = null;
         }
+    }
+
+    private bool CanStart() => !IsRunning;
+
+    [RelayCommand(CanExecute = nameof(CanCancel))]
+    private void Cancel()
+    {
+        _cts?.Cancel();
+    }
+
+    private bool CanCancel() => IsRunning;
+
+    partial void OnIsRunningChanged(bool value)
+    {
+        StartCommand.NotifyCanExecuteChanged();
+        CancelCommand.NotifyCanExecuteChanged();
     }
 }

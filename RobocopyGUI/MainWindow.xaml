@@ -6,11 +6,12 @@
     xmlns:local="using:RobocopyGUI"
     Title="RobocopyGUI">
 
-    <Window.Resources>
-        <local:BoolNegationConverter x:Key="NegateBool" />
-    </Window.Resources>
-
     <Grid Padding="20" RowSpacing="14" ColumnSpacing="8">
+
+        <Grid.Resources>
+            <local:BoolNegationConverter x:Key="NegateBool" />
+        </Grid.Resources>
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
