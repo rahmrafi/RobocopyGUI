@@ -1,5 +1,5 @@
 using Microsoft.UI.Xaml;
-using Microsoft.UI.Xaml.Controls;
+//using Microsoft.UI.Xaml.Controls;
 using RobocopyGUI.ViewModels;
 using Windows.Storage;
 using Windows.Storage.Pickers;
@@ -17,14 +17,14 @@ public sealed partial class MainWindow : Window
         ViewModel = new MainViewModel(DispatcherQueue);
     }
 
-    private async void BrowserSource_Click(object sender, RoutedEventArgs e)
+    private async void BrowseSource_Click(object sender, RoutedEventArgs e)
     {
         var folder = await PickerFolderAsync();
         if (folder != null)
             ViewModel.SourcePath = folder.Path;
     }
 
-    private async void BrowserDestination_Click(object sender, RoutedEventArgs e)
+    private async void BrowseDestination_Click(object sender, RoutedEventArgs e)
     {
         var folder = await PickerFolderAsync();
         if (folder != null)
