@@ -1,4 +1,4 @@
-﻿using RobocopyGUI.Models
+﻿using RobocopyGUI.Models;
 
 public class RobocopyResult
 {
@@ -7,8 +7,8 @@ public class RobocopyResult
 
     public long DirsTotal { get; set; }
     public long DirsCopied { get; set; }
-    public long filesTotal { get; set; }
-    public long filesCopied { get; set; }
+    public long FilesTotal { get; set; }
+    public long FilesCopied { get; set; }
     public long BytesTotal { get; set; }
     public long BytesCopied { get; set; }
 
