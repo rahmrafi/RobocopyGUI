@@ -1,6 +1,6 @@
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
-using RobocopyGUI.Storage;
+using RobocopyGUI.ViewModels;
 using Windows.Storage;
 using Windows.Storage.Pickers;
 using WinRT.Interop;
@@ -31,7 +31,7 @@ public sealed partial class MainWindow : Window
             ViewModel.DestinationPath = folder.Path;
     }
 
-    private async Task<StorageFolder?> PickFolderAsync()
+    private async Task<StorageFolder?> PickerFolderAsync()
     {
         var picker = new FolderPicker
         {

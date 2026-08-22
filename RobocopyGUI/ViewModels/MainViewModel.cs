@@ -49,22 +49,22 @@ public partial class MainViewModel : ObservableObject
     private bool CanCancel() => !IsRunning;
     private void OnIsRunningChanged(bool value)
     {
-        StartCommand.NotifyCanExecutedChanged();
-        CancelCommand.NotifyCanExecutedChanged();
+        StartCommand.NotifyCanExecuteChanged();
+        CancelCommand.NotifyCanExecuteChanged();
     }
 
     [RelayCommand(CanExecute = nameof(CanStart))]
 
     private async Task StartTask()
     {
-        if (string.IsNullOrWhiteSpace(sourcePath) || string.IsNullOrWhiteSpace(destinationPath))
+        if (string.IsNullOrWhiteSpace(SourcePath) || string.IsNullOrWhiteSpace(DestinationPath))
         {
             StatusText = "Please choose both a source and destination folder.";
             return;
         }
 
         LogLines.Clear();
-        summaryText = string.Empty;
+        SummaryText = string.Empty;
         IsRunning = true;
         StatusText = "Running...";
 
@@ -97,7 +97,7 @@ public partial class MainViewModel : ObservableObject
                 cancellationToken: _cts.Token);
 
             StatusText = result.Succeeded ? "Completed successfully" : "Completed with errors.";
-            summaryText =
+            SummaryText =
                 $"Dirs : {result.DirsCopied}/{result.DirsTotal} " +
                 $"Files : {result.FilesCopied}/{result.FilesTotal} " +
                 $"Bytes : {result.BytesCopied}/{result.BytesTotal} " +

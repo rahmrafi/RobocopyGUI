@@ -8,14 +8,14 @@ namespace RobocopyGUI.Services;
 
 public interface IRobocopyService
 {
-    Task<RobocopyResult> RunAsync(RobocopyOption options, Action<string> onOutputLine, CancellationToken cancellationToken);
+    Task<RobocopyResult> RunAsync(RobocopyOptions options, Action<string> onOutputLine, CancellationToken cancellationToken);
 }
 
 public class RobocopyService : IRobocopyService
 {
     private Process? _process;
 
-    private static string BuildArguments(RobocopyOption o)
+    private static string BuildArguments(RobocopyOptions o)
     {
         var sb = new StringBuilder();
 
@@ -115,7 +115,7 @@ public class RobocopyService : IRobocopyService
         catch { }
     }
 
-    public async Task<RobocopyResult> RunAsync(RobocopyOption options, Action<string> onOutputLine, CancellationToken cancellationToken)
+    public async Task<RobocopyResult> RunAsync(RobocopyOptions options, Action<string> onOutputLine, CancellationToken cancellationToken)
     {
         if (string.IsNullOrWhiteSpace(options.SourcePath))
             throw new ArgumentException("Source path is required.", nameof(options));

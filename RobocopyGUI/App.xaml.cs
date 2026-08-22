@@ -7,7 +7,7 @@ public partial class App : Application
     private Window? _window;
     public App()
     {
-        this.InitializedComponent();
+        this.InitializeComponent();
     }
 
     protected override void OnLaunched(LaunchActivatedEventArgs args)
