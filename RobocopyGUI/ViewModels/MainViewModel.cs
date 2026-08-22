@@ -28,6 +28,10 @@ public partial class MainViewModel : ObservableObject
     [ObservableProperty] private bool purge;
     [ObservableProperty] private bool restartableMode;
 
+    public bool IsNotMirror => !Mirror;
+
+    partial void OnMirrorChanged(bool value) => OnPropertyChanged(nameof(IsNotMirror));
+
     [ObservableProperty] private bool multiThreaded = true;
     [ObservableProperty] private double threadCount = 8;
     [ObservableProperty] private double retryCount = 3;

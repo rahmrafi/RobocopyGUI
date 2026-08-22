@@ -4,14 +4,10 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:RobocopyGUI"
-    Title="RobocopyGUI">
+    Title="Robocopy GUI">
 
     <Grid Padding="20" RowSpacing="14" ColumnSpacing="8">
 
-        <Grid.Resources>
-            <local:BoolNegationConverter x:Key="NegateBool" />
-        </Grid.Resources>
-        
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -57,9 +53,9 @@
         <StackPanel Grid.Row="3" Orientation="Horizontal" Spacing="20">
             <CheckBox Content="Mirror (/MIR)" IsChecked="{x:Bind ViewModel.Mirror, Mode=TwoWay}" />
             <CheckBox Content="Copy subdirectories (/E)" IsChecked="{x:Bind ViewModel.CopySubdirectories, Mode=TwoWay}"
-                      IsEnabled="{x:Bind ViewModel.Mirror, Mode=OneWay, Converter={StaticResource NegateBool}}" />
+                      IsEnabled="{x:Bind ViewModel.Mirror, Mode=OneWay}" />
             <CheckBox Content="Purge extras (/PURGE)" IsChecked="{x:Bind ViewModel.Purge, Mode=TwoWay}"
-                      IsEnabled="{x:Bind ViewModel.Mirror, Mode=OneWay, Converter={StaticResource NegateBool}}" />
+                      IsEnabled="{x:Bind ViewModel.Mirror, Mode=OneWay}" />
             <CheckBox Content="Restartable mode (/Z)" IsChecked="{x:Bind ViewModel.RestartableMode, Mode=TwoWay}" />
         </StackPanel>
 
@@ -113,5 +109,4 @@
                     Style="{StaticResource AccentButtonStyle}" VerticalAlignment="Center" />
         </Grid>
     </Grid>
-
 </Window>

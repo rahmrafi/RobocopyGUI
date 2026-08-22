@@ -1,4 +1,4 @@
-﻿using RobocopyGUI.Models;
+﻿namespace RobocopyGUI.Models;
 
 public class RobocopyResult
 {
