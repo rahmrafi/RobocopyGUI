@@ -1,71 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Project\\RobocopyGUI\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{CE0B40ED-9E25-A94A-9513-03F5C868D57C}|RobocopyGUI\\RobocopyGUI.csproj|d:\\project\\robocopygui\\robocopygui\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{CE0B40ED-9E25-A94A-9513-03F5C868D57C}|RobocopyGUI\\RobocopyGUI.csproj|solutionrelative:robocopygui\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Project\\RobocopyGUI\\RobocopyGUI\\obj\\x64\\Debug\\net8.0-windows10.0.19041.0\\MainWindow.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:RobocopyGUI\\obj\\x64\\Debug\\net8.0-windows10.0.19041.0\\MainWindow.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE0B40ED-9E25-A94A-9513-03F5C868D57C}|RobocopyGUI\\RobocopyGUI.csproj|d:\\project\\robocopygui\\robocopygui\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CE0B40ED-9E25-A94A-9513-03F5C868D57C}|RobocopyGUI\\RobocopyGUI.csproj|solutionrelative:robocopygui\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 1,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MainWindow.g.cs",
-              "DocumentMoniker": "D:\\Project\\RobocopyGUI\\RobocopyGUI\\obj\\x64\\Debug\\net8.0-windows10.0.19041.0\\MainWindow.g.cs",
-              "RelativeDocumentMoniker": "RobocopyGUI\\obj\\x64\\Debug\\net8.0-windows10.0.19041.0\\MainWindow.g.cs",
-              "ToolTip": "D:\\Project\\RobocopyGUI\\RobocopyGUI\\obj\\x64\\Debug\\net8.0-windows10.0.19041.0\\MainWindow.g.cs",
-              "RelativeToolTip": "RobocopyGUI\\obj\\x64\\Debug\\net8.0-windows10.0.19041.0\\MainWindow.g.cs",
-              "ViewState": "AgIAAMUEAAAAAAAAAAAIwBoFAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-22T10:12:34.43Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "D:\\Project\\RobocopyGUI\\RobocopyGUI\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "RobocopyGUI\\MainWindow.xaml",
-              "ToolTip": "D:\\Project\\RobocopyGUI\\RobocopyGUI\\MainWindow.xaml",
-              "RelativeToolTip": "RobocopyGUI\\MainWindow.xaml",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAADkAAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-08-22T10:12:28.797Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainViewModel.cs",
-              "DocumentMoniker": "D:\\Project\\RobocopyGUI\\RobocopyGUI\\ViewModels\\MainViewModel.cs",
-              "RelativeDocumentMoniker": "RobocopyGUI\\ViewModels\\MainViewModel.cs",
-              "ToolTip": "D:\\Project\\RobocopyGUI\\RobocopyGUI\\ViewModels\\MainViewModel.cs",
-              "RelativeToolTip": "RobocopyGUI\\ViewModels\\MainViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-22T10:08:10.352Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }
